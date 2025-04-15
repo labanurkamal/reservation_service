@@ -1,0 +1,47 @@
+# Виртуальные окружения
+**/.venv/
+**/venv/
+
+# Env-файлы
+.env
+.env.*
+
+# Кеш Python
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+**/*.pyd
+
+# Явное исключение __pycache__ внутри reservation/src/
+reservation/src/**/__pycache__/
+reservation/src/**/*.py[cod]
+reservation/src/**/*.pyo
+reservation/src/**/*.pyd
+reservation/tests/**/__pycache__/
+reservation/tests/**/*.py[cod]
+reservation/tests/**/*.pyo
+reservation/tests/**/*.pyd
+reservation/tests/**/*.pytest_cache
+# IDE
+**/.idea/
+**/.vscode/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Логи и БД
+*.log
+*.sqlite3
+*.db
+
+# Тестовые артефакты
+.coverage
+htmlcov/
+**/.pytest_cache/
+.tox/
+.mypy_cache/
+
+# Кеш миграций Alembic
+reservation/src/alembic/versions/*.pyc
+reservation/src/alembic/versions/__pycache__/
