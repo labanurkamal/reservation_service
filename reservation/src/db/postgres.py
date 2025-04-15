@@ -3,6 +3,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, Asyn
 
 from core.config import db_settings
 
+
 class Database:
     def __init__(self, db_url: str, echo: bool = False):
         self.engine = create_async_engine(db_url, echo=echo)
@@ -15,5 +16,6 @@ class Database:
             except Exception:
                 await session.rollback()
                 raise
+
 
 db = Database(db_url=db_settings.dsn, echo=db_settings.echo)
