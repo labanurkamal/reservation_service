@@ -9,6 +9,7 @@ from dependencies.container import Container
 from exceptions.base import AppException
 from exceptions.handlers import app_exception_handler
 
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     container: Container = Container()
